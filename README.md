@@ -14,7 +14,8 @@ En Ajustes aparece "Entrar (pruebas)". Abre dos ventanas con nombres distintos p
 1. https://console.cloud.google.com → proyecto nuevo → **APIs y servicios → Pantalla de consentimiento de OAuth** (tipo Externo; nombre de la app, correo).
 2. **Credenciales → Crear credenciales → ID de cliente de OAuth → Aplicación web**.
 3. En **Orígenes de JavaScript autorizados** añade tu dominio exacto (p. ej. `https://mares.tudominio.com`) y, para probar, `http://localhost:3000`.
-4. Copia el Client ID (`xxxx.apps.googleusercontent.com`). No hace falta secreto de cliente.
+4. En **URI de redireccionamiento autorizados** añade tu dominio con barra final (p. ej. `https://mares.tudominio.com/` y `http://localhost:3000/`).
+5. Copia el Client ID (`xxxx.apps.googleusercontent.com`). No hace falta secreto de cliente.
 
 ## 3. Desplegar (necesita HTTPS y una base de datos persistente)
 Con `DATABASE_URL` el servidor guarda en **Postgres** (recomendado en Render/Railway, sin disco). Sin ella usa SQLite en `DATA_DIR` (pruebas o VPS con disco).
